@@ -34,7 +34,7 @@ body {
 
 .input-value {
   padding: 11px;
-  padding-right: 252px;
+  padding-right: 240px;
   border: 1px solid #ddd;
   border-bottom: 1px solid #999;
   border-radius: 7px;
@@ -130,3 +130,4 @@ body {
   margin: 0;
   padding: 0;
 }
+
