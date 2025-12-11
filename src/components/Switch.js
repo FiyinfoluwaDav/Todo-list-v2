@@ -1,5 +1,5 @@
 import React from "react";
-import "../styles.css";
+import "../switch.css";
 
 function Switch({ toggled, onToggle }) {
   return (
