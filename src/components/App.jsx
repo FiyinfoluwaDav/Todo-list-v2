@@ -1,12 +1,24 @@
-import React, { useState } from "react";
+import React, { useEffect, useState } from "react";
 import { FaRegTrashAlt } from "react-icons/fa";
 import { FaPlus } from "react-icons/fa";
 import "../styles.css";
 
 function App() {
+  const [theme, setTheme] = useState(false);
   const [inputValue, setInputValue] = useState("");
   const [tasks, setTasks] = useState([]);
 
+    const changeTheme = () =>{
+      setTheme(!theme);
+    }
+
+  useEffect(() =>{
+    if (theme === true){
+      document.body.classList.add("dark");
+    }else{
+      document.body.classList.remove("dark");
+    }
+  }, [theme]);
   const addItem = () => {
     if (inputValue.trim() === "") {
       return;
@@ -35,6 +47,7 @@ function App() {
   return (
     <div className="todo-container">
       <h2>My Todo List</h2>
+      <button onClick={changeTheme}>Change Theme</button>
       <p>
         {tasks.filter((task) => task.completed).length} of {tasks.length} task
         completed
