@@ -1,8 +1,8 @@
-import React, { useState } from "react";
+import { useState } from "react";
 import { FaRegTrashAlt } from "react-icons/fa";
 import { FaPlus } from "react-icons/fa";
-
 import "../styles.css";
+
 function App() {
   const [inputValue, setInputValue] = useState("");
   const [tasks, setTasks] = useState([]);
