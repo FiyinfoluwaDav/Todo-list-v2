@@ -1,6 +1,9 @@
 import React, { useEffect, useState } from "react";
 import { FaRegTrashAlt } from "react-icons/fa";
 import { FaPlus } from "react-icons/fa";
+import MoonIcon from "./icons/MoonIcon";
+import SunIcon from "./icons/SunIcon";
+import Switch from "./Switch";
 import "../styles.css";
 
 function App() {
