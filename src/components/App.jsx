@@ -5,6 +5,7 @@ import MoonIcon from "./icons/MoonIcon";
 import SunIcon from "./icons/SunIcon";
 import Switch from "./Switch";
 import "../styles.css";
+import "../switch.css";
 
 function App() {
   const [theme, setTheme] = useState(false);
@@ -50,7 +51,11 @@ function App() {
   return (
     <div className="todo-container">
       <h2>My Todo List</h2>
-      <button onClick={changeTheme}>Change Theme</button>
+      <div className="toggle-container">
+        <SunIcon />
+        <Switch toggled={theme} onToggle={changeTheme} />
+        <MoonIcon />
+      </div>
       <p>
         {tasks.filter((task) => task.completed).length} of {tasks.length} task
         completed
